@@ -1,0 +1,18 @@
+" echo join(split(&runtimepath, ','), "\n")
+
+source ~/.config/nvim/conf/general.vim
+source ~/.config/nvim/conf/plugins.vim
+source ~/.config/nvim/conf/airline.vim
+source ~/.config/nvim/conf/denite.vim
+source ~/.config/nvim/conf/coc.vim
+source ~/.config/nvim/conf/nerd_tree.vim
+source ~/.config/nvim/conf/other.vim
+source ~/.config/nvim/conf/ui.vim
+source ~/.config/nvim/conf/keymaps.vim
+source ~/.config/nvim/conf/commands.vim
+
+
+" Reload icons after init source
+if exists('g:loaded_webdevicons')
+  call webdevicons#refresh()
+endif
