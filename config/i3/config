@@ -196,18 +196,14 @@ bindsym Print exec deepin-screenshot
 new_window pixel 0
 new_float pixel 0
 popup_during_fullscreen smart
+floating_minimum_size 800 x 600
 
 assign [class="Chromium"] 2
 assign [class="VirtualBox"] 9
-# assign [class="Vmware"] 0
-
-for_window [class="jetbrains-idea"] floating enable
-for_window [class="jetbrains-idea"] resize set 1000 800
 assign [class="jetbrains-idea"] 1
-
-for_window [class="jetbrains-webstorm"] floating enable
-for_window [class="jetbrains-webstorm"] resize set 1000 800
 assign [class="jetbrains-webstorm"] 3
+
+for_window [class="^jetbrains-"] floating enable
 
 exec --no-startup-id webstorm
 exec --no-startup-id chromium
