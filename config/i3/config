@@ -142,6 +142,7 @@ exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id conky -b -d -c ~/.config/conky/conky.conf
 exec --no-startup-id feh --randomize --bg-fill ~/Documents/wallpaper/*
+exec --no-startup-id xfce4-clipman
 
 focus_follows_mouse no
 
@@ -184,5 +185,5 @@ assign [class="jetbrains-webstorm"] 3
 for_window [class="^jetbrains-"] floating enable
 
 exec --no-startup-id webstorm
-exec --no-startup-id chromium
+exec --no-startup-id chromium --password-store=gnome
 exec --no-startup-id intellij-idea-ultimate-edition
