@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<direct>
+	<chain ipv="ipv4" table="mangle" chain="V2RAY"/>
+	<rule ipv="ipv4" table="mangle" chain="PREROUTING" priority="0">-j V2RAY</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="0">-d 127.0.0.1/32 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="1">-d 224.0.0.0/4 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="2">-d 255.255.255.255/32 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="3">-d 10.0.0.0/8 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="4">-d 192.168.0.0/16 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="5">-d 169.254.0.0/16 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="6">-d 172.16.0.0/12 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="7">-d 240.0.0.0/4 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="8">-d 192.168.0.0/16 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="9">-d 169.254.0.0/16 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="10">-d 172.16.0.0/12 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="11">-d 240.0.0.0/4 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="12">-d 10.0.0.0/8 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="13">-p udp -j TPROXY --on-port 1080 --tproxy-mark 1</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY" priority="14">-p tcp -j TPROXY --on-port 1080 --tproxy-mark 1</rule>
+
+	<chain ipv="ipv4" table="mangle" chain="V2RAY_LOCAL"/>
+	<rule ipv="ipv4" table="mangle" chain="OUTPUT" priority="0">-j V2RAY_LOCAL</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="1">-d 224.0.0.0/4 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="2">-d 255.255.255.255/32 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="3">-d 10.0.0.0/8 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="4">-d 192.168.0.0/16 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="5">-d 169.254.0.0/16 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="6">-d 172.16.0.0/12 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="7">-d 240.0.0.0/4 -p tcp -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="8">-d 192.168.0.0/16 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="9">-d 169.254.0.0/16 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="10">-d 172.16.0.0/12 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="11">-d 240.0.0.0/4 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="12">-d 10.0.0.0/8 -p udp ! --dport 53 -j RETURN</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="13">-j RETURN -m mark --mark 0xff</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="14">-p udp -j MARK --set-mark 1</rule>
+	<rule ipv="ipv4" table="mangle" chain="V2RAY_LOCAL" priority="15">--p tcp -j MARK --set-mark 1</rule>
+</direct>
