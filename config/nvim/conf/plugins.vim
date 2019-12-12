@@ -31,7 +31,7 @@ call minpac#add('rstacruz/vim-closer')
 call minpac#add('easymotion/vim-easymotion')
 
 " Intellisense Engine
-call minpac#add('neoclide/coc.nvim', {'do': 'call coc#util#install()', 'branch': 'release'})
+call minpac#add('neoclide/coc.nvim', {'do': {-> system('yarn install --frozen-lockfile')}, 'branch': 'release'})
 
 " Tmux/Neovim movement integration
 call minpac#add('christoomey/vim-tmux-navigator')
