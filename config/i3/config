@@ -14,7 +14,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+# bindsym $mod+Return exec terminator
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,5 +186,5 @@ assign [class="jetbrains-webstorm"] 3
 for_window [class="^jetbrains-"] floating enable
 
 exec --no-startup-id webstorm
-exec --no-startup-id chromium
+exec --no-startup-id chromium --password-store=detect
 exec --no-startup-id intellij-idea-ultimate-edition
