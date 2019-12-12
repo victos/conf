@@ -8,3 +8,7 @@ ln -s "$PROJECT_DIR/conky" "$CONFIG_DIR/conky"
 ln -s "$PROJECT_DIR/nvim" "$CONFIG_DIR/nvim"
 ln -s "$PROJECT_DIR/tmux" "$CONFIG_DIR/tmux"
 ln -s "$PROJECT_DIR/polybar" "$CONFIG_DIR/polybar"
+
+mkdir -p .local/share/fonts
+cp "$PROJECT_DIR/conky/Conky\ Icons\ by\ Carelli.ttf" "$HOME/.local/share/fonts/"
+fc-cache
