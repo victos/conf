@@ -98,4 +98,4 @@ catch
 endtry
 endfunction
 
-autocmd VimEnter * call InitAirlineConfig()
+call InitAirlineConfig()
