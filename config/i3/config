@@ -193,5 +193,5 @@ assign [class="jetbrains-webstorm"] 2
 for_window [class="^jetbrains-"] floating enable
 
 exec --no-startup-id webstorm
-exec --no-startup-id chromium --password-store=detect
+exec --no-startup-id chromium --password-store=kwallet5
 exec --no-startup-id intellij-idea-ultimate-edition
