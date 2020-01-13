@@ -145,6 +145,7 @@ bindsym $mod+Ctrl+r move workspace to output right
 bindsym $mod+Ctrl+l move workspace to output left
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id numlockx on
 
 exec --no-startup-id fcitx -d
 exec --no-startup-id compton -b
