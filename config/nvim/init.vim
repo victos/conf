@@ -9,9 +9,3 @@ source ~/.config/nvim/conf/ui.vim
 source ~/.config/nvim/conf/keymaps.vim
 source ~/.config/nvim/conf/commands.vim
 source ~/.config/nvim/conf/status_bar.vim
-
-
-" Reload icons after init source
-if exists('g:loaded_webdevicons')
-  call webdevicons#refresh()
-endif

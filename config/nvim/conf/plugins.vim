@@ -44,9 +44,6 @@ call minpac#add('HerringtonDarkholme/yats.vim')
 
 " === Syntax Highlighting === "
 
-" Syntax highlighting for nginx
-call minpac#add('chr4/nginx.vim')
-
 " Syntax highlighting for javascript libraries
 call minpac#add('othree/javascript-libraries-syntax.vim')
 
@@ -61,7 +58,6 @@ call minpac#add('scrooloose/nerdtree')
 call minpac#add('mhartington/oceanic-next')
 
 " Icons
-call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('tiagofumo/vim-nerdtree-syntax-highlight')
 
 " manage plugins
