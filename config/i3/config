@@ -143,6 +143,9 @@ bindsym $mod+x resize set 1920 1060
 bindsym $mod+Shift+f exec --no-startup-id autorandr -c -f
 bindsym $mod+Ctrl+r move workspace to output right
 bindsym $mod+Ctrl+l move workspace to output left
+bindsym $mod+Ctrl+u move workspace to output up
+bindsym $mod+Ctrl+d move workspace to output down
+bindsym $mod+Ctrl+p move workspace to output primary
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
@@ -189,10 +192,10 @@ floating_minimum_size 800 x 600
 
 assign [class="Chromium"] 9
 assign [class="jetbrains-idea"] 1
-assign [class="jetbrains-webstorm"] 2
+assign [class="Code"] 2
 
 for_window [class="^jetbrains-"] floating enable
 
-exec --no-startup-id webstorm
+exec --no-startup-id code
 exec --no-startup-id chromium --password-store=gnome
 exec --no-startup-id intellij-idea-ultimate-edition

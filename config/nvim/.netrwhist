@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/milyuu'
+let g:netrw_dirhist_6='/home/milyuu/.IntelliJIdea2019.3'
+let g:netrw_dirhist_5='/home/milyuu'
+let g:netrw_dirhist_4='/home/milyuu/.android'
+let g:netrw_dirhist_3='/home/milyuu'
+let g:netrw_dirhist_2='/home/milyuu/.accelerate'
+let g:netrw_dirhist_1='/home/milyuu'
