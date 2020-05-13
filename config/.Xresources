@@ -46,3 +46,9 @@ Xft.dpi:96
 !WenQuanYi Micro Hei,文泉驛微米黑,文泉驿微米黑:style=Regular
 URxvt.font:xft:Source Code Pro:antialias=True:pixelsize=12,xft:WenQuanYi Micro Hei,文泉驛微米黑,文泉驿微米黑:style=Regular:pixelsize=12
 URxvt.boldfont:xft:Source Code Pro:antialias=True:pixelsize=12,xft:WenQuanYi Micro Hei,文泉驛微米黑,文泉驿微米黑:style=Regular:pixelsize=12
+! tab support
+URxvt.perl-ext-common: ...,tabbed,...
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
