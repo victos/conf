@@ -1,10 +1,9 @@
-" Enable true color support
-set termguicolors
+set t_Co=256
 
 " Editor theme
 set background=dark
 try
-  colorscheme OceanicNext
+  colorscheme gruvbox
 catch
   colorscheme slate
 endtry

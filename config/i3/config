@@ -15,7 +15,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec terminator
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -27,7 +27,7 @@ bindsym $mod+p exec --no-startup-id dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-set $menu --no-startup-id qdbus org.kde.krunner /App display
+set $menu --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec $menu
 
 
@@ -150,6 +150,8 @@ bindsym $mod+Ctrl+p move workspace to output primary
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
 
+exec --no-startup-id light-locker
+exec --no-startup-id pamusb-agent --daemon
 exec --no-startup-id fcitx -d
 exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
@@ -160,7 +162,7 @@ exec --no-startup-id dex -a -s ~/.config/autostart
 focus_follows_mouse no
 
 #set $Locker i3lock && sleep 1
-set $Locker xtrlock && sleep 1
+set $Locker light-locker-command -l && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -176,7 +178,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+Ctrl+Delete mode "$mode_system"
 bindsym $mod+m move position mouse
 bindsym $mod+b bar hidden_state toggle
 # Pulse Audio controls

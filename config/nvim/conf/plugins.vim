@@ -55,7 +55,7 @@ call minpac#add('othree/yajs.vim')
 call minpac#add('scrooloose/nerdtree')
 
 " Colorscheme
-call minpac#add('mhartington/oceanic-next')
+call minpac#add('morhetz/gruvbox')
 
 " Icons
 call minpac#add('tiagofumo/vim-nerdtree-syntax-highlight')

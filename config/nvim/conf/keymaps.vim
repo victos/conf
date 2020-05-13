@@ -52,5 +52,5 @@ noremap <leader>tl :tabn<CR>
 noremap <leader>tc :tabc<CR>
 
 " access system clipboard
-nnoremap <leader>v "+gp
+nnoremap <leader>p "+gp
 nnoremap <leader>c "+y
